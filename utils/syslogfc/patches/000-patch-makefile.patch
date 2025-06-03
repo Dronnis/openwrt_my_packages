@@ -1,0 +1,11 @@
+--- a/src/syslog_entry.c
++++ b/src/syslog_entry.c
+@@ -456,7 +456,7 @@ static int parse_timestamp(
+	if (*data)
+	{
+		field->value.time.unixtime =
+-			timelocal(&field->value.time.timestamp);
++			mktime(&field->value.time.timestamp);
+	}
+
+	return *data ? 0 : -EILSEQ;
