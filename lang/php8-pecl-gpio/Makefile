@@ -1,11 +1,4 @@
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
-
 include $(TOPDIR)/rules.mk
-
-
 
 
 PECL_NAME:=gpio
@@ -21,9 +14,6 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/embedded-php/ext-gpio.git
 PKG_SOURCE_VERSION:=57a2caa738832fcac8405f84cbd084039cf6efc6
 PKG_MIRROR_HASH:=skip
-
-
-#PKG_SOURCE:=$(PECL_NAME)-$(PKG_VERSION).tar.zst
 
 
 PKG_MAINTAINER:=Dronnis Marvel <dronnis@gmail.com>
@@ -42,10 +32,6 @@ include $(TOPDIR)/package/feeds/packages/php8/pecl.mk
 CONFIGURE_ARGS+= \
 	--with-gpio
 
-#define Build/InstallDev
-	#mkdir -p $(STAGING_DIR)/usr/include/php8/ext/$(PECL_NAME)
-	#cp $(PKG_BUILD_DIR)/php_phalcon.h $(STAGING_DIR)/usr/include/php8/ext/$(PECL_NAME)/
-#endef
 
 $(eval $(call PHP8PECLPackage,$(PECL_NAME),$(PECL_LONGNAME), ,30))
 $(eval $(call BuildPackage,$(PKG_NAME)))

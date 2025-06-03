@@ -1,8 +1,3 @@
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
-
 include $(TOPDIR)/rules.mk
 
 
@@ -20,9 +15,6 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/embedded-php/ext-uart.git
 PKG_SOURCE_VERSION:=59a2aff23574cebf2d50361e4c6a700e8e706af0
 PKG_MIRROR_HASH:=skip
-
-
-#PKG_SOURCE:=$(PECL_NAME)-$(PKG_VERSION).tar.zst
 
 
 PKG_MAINTAINER:=Dronnis Marvel <dronnis@gmail.com>
