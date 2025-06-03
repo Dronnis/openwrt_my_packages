@@ -1,8 +1,5 @@
 include $(TOPDIR)/rules.mk
 
-
-
-
 PECL_NAME:=uart
 PECL_LONGNAME:=The UART PHP Extension provides an object-oriented wrapper to the UART Linux Kernel driver that gives users the ability to write code that interacts with external hardware using the UART asynchronous serial communication protocol.
 PKG_VERSION:=1.0.0
@@ -15,7 +12,6 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/embedded-php/ext-uart.git
 PKG_SOURCE_VERSION:=59a2aff23574cebf2d50361e4c6a700e8e706af0
 PKG_MIRROR_HASH:=skip
-
 
 PKG_MAINTAINER:=Dronnis Marvel <dronnis@gmail.com>
 

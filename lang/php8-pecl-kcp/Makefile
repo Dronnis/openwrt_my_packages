@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
-PECL_NAME:=gpio
-PECL_LONGNAME:=PHP Extension GPIO  provides an object-oriented wrapper to the gpio Linux Userspace ABI that gives users the ability to write code that interacts with the general-purpose input/output pins available in Linux-based
+PECL_NAME:=kcp
+PECL_LONGNAME:=PHP Extension kcp protocol 
 
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
@@ -10,10 +10,9 @@ PKG_HASH:=skip
 
 PKG_NAME:=php8-pecl-$(PECL_NAME)
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/embedded-php/ext-gpio.git
-PKG_SOURCE_VERSION:=57a2caa738832fcac8405f84cbd084039cf6efc6
-PKG_MIRROR_HASH:=skip
-
+PKG_SOURCE_URL:=https://github.com/wpjscc/php-ext-kcp.git
+PKG_SOURCE_VERSION:=2c3542b4233c4f5059105247178f63e0f93564af
+PKG_MIRROR_HASH:=b95da5504a423ef2461ad7eef4bc6a86fc8f8635aa60ca15bb9cf61b49e4feed
 
 PKG_MAINTAINER:=Dronnis Marvel <dronnis@gmail.com>
 
@@ -29,8 +28,7 @@ include $(INCLUDE_DIR)/nls.mk
 include $(TOPDIR)/package/feeds/packages/php8/pecl.mk
 
 CONFIGURE_ARGS+= \
-	--with-gpio
-
+	--enable-kcp
 
 $(eval $(call PHP8PECLPackage,$(PECL_NAME),$(PECL_LONGNAME), ,30))
 $(eval $(call BuildPackage,$(PKG_NAME)))

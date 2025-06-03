@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
-PECL_NAME:=ds
-PECL_LONGNAME:=PHP extension Data Structures
+PECL_NAME:=mailparse
+PECL_LONGNAME:=PHP extension for interfacing with mailparse
 
-PKG_VERSION:=1.6.0
-PKG_RELEASE:=1
-PKG_HASH:=7c5eaa693e49f43962fa8afa863c51000dc620048dcf9442453c27ca151e291e
+PKG_VERSION:=3.1.8
+PKG_RELEASE:=2
+PKG_HASH:=59beab4ef851770c495ba7a0726ab40e098135469a11d9c8e665b089c96efc2f
 
-PKG_NAME:=php8-pecl-ds
+PKG_NAME:=php8-pecl-mailparse
 PKG_SOURCE:=$(PECL_NAME)-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=http://pecl.php.net/get/
 
@@ -25,9 +25,8 @@ include $(INCLUDE_DIR)/nls.mk
 include $(TOPDIR)/package/feeds/packages/php8/pecl.mk
 
 CONFIGURE_ARGS+= \
-	--enable-ds 
+	--enable-mailparse
 
 
-
-$(eval $(call PHP8PECLPackage,$(PECL_NAME),$(PECL_LONGNAME)))
+$(eval $(call PHP8PECLPackage,$(PECL_NAME),$(PECL_LONGNAME), ,30))
 $(eval $(call BuildPackage,$(PKG_NAME)))
