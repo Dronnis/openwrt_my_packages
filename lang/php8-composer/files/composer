@@ -1,0 +1,2 @@
+#!/bin/sh 
+php-cli /usr/lib/php8-composer/composer.phar $@
