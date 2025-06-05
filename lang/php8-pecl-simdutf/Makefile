@@ -31,10 +31,5 @@ include $(TOPDIR)/package/feeds/packages/php8/pecl.mk
 CONFIGURE_ARGS+= \
 	--enable-simdutf
 
-#define Build/InstallDev
-	#mkdir -p $(STAGING_DIR)/usr/include/php8/ext/$(PECL_NAME)
-	#cp $(PKG_BUILD_DIR)/php_phalcon.h $(STAGING_DIR)/usr/include/php8/ext/$(PECL_NAME)/
-#endef
-
 $(eval $(call PHP8PECLPackage,$(PECL_NAME),$(PECL_LONGNAME), +libstdcpp,30))
 $(eval $(call BuildPackage,$(PKG_NAME)))
